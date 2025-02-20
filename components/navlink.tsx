@@ -7,7 +7,7 @@ type NavlinkProps = {
   containerClass?: string;
   href: string;
   onClick?: () => void;
-  className?: string;
+className?: string;
 };
 
 export default function Navlink({

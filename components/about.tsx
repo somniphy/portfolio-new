@@ -1,30 +1,38 @@
 import Image from "next/image";
-
 import { TextEncrypted } from "./text-encrypted";
+import { designTools, frameworks, languages, libraries } from "@/const/tools";
+import Navlink from "./navlink";
 
 export default function AboutSection() {
   return (
-    <section className="px-[5.5%] relative space-y-6">
-      <h2 className="text-white text-7xl tracking-wide uppercase font-bold will-change-auto">
-        <TextEncrypted text="About" interval={50} />
-      </h2>
-      <hr className="border-white border-1 w-full" />
-      <div className="flex justify-between space-x-8">
-        <div className="flex flex-col w-1/2 space-y-4">
-          <h1 className="text-2xl uppercase font-bold">Christian Penales</h1>
-          <p className="text-sm uppercase text-white">
-            A web developer, and with a strong passion for designing and
-            building exceptional digital experiences. Seeking new challenges and
-            learning new things in the field of web development.
-          </p>
-          <p className="text-sm uppercase text-white">
-            When I am not coding, I enjoy producing music and gaming. 
-          </p>
-        </div>
-        <div className="w-1/2 flex justify-end">
-          <Image src="/image-5.jpg" alt="Me" width={300} height={300} />
+    <div className="relative min-h-96 px-6 w-screen flex">
+      <div className="w-full flex flex-col items-center">
+        <div className="flex flex-col">
+          <TextEncrypted
+            text="About"
+            className="text-6xl font-bold text-white uppercase"
+          />
+          <div className="flex flex-col mt-4">
+            <h1 className="text-4xl text-white uppercase font-medium max-w-7xl">
+              A <span className="text-red-600">UI/UX Designer </span>
+              and <span className="text-red-600">Web Developer </span>
+              with a knack for creating intuitive, user-centered digital
+              experiences. With a strong foundation in both design and
+              development, I bridge the gap between{" "}
+              <span className="italic bg-white text-black px-2">
+                aesthetics
+              </span>{" "}
+              &<span className="font-bold"> functionality.</span>
+            </h1>
+
+            <Navlink
+              href="/about"
+              title="More About me"
+              className="mt-4 text-sm font-medium uppercase text-red-600 rounded-full px-4 py-2 border border-white"
+            />
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

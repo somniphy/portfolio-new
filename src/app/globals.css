@@ -2,12 +2,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #141414;
+  --foreground: #121212;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #141414;
+    --background: #121212;
     --foreground: #ffffff;
   }
 }
@@ -25,3 +25,46 @@ body {
   opacity: 1;
   will-change: opacity, transform;
 } */
+
+@layer utilities {
+
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #131313;
+    color: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-geist-sans);
+    font-size: 14px;
+    justify-content: center;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    overflow: hidden;
+    z-index: 40;
+    pointer-events: none;
+    transition: clip-path 0.3s ease-in-out;
+    text-transform: uppercase;
+  }
+  
+  .menu-overlay .menu-open {
+    pointer-events: auto;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+
+  .menu-close {
+    font-size: 14px;
+    /* padding: 2px 5px; */
+    font-weight: 500;
+    font-family: var(--font-geist-sans);
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  
+  
+}

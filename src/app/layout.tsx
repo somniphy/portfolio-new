@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body 
-        className={`${figtree.variable} antialiased min-h-screen 
+        className={`${figtree.variable} antialiased min-h-screen max-w-[1440px] 
           bg-white text-black 
           dark:bg-black dark:text-white`}
       >
@@ -34,9 +34,10 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
-          <IntroLoader />
+          {/* <IntroLoader /> */}
           <SmoothScroll>
             <Navbar />
+            
             {children}
           </SmoothScroll>
         </ThemeProvider>

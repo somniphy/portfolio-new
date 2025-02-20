@@ -10,14 +10,12 @@ export const frameworks = [
   { name: "Laravel" },
   { name: "Next.js" },
   { name: "Tailwind CSS" },
-  { name: "Bootstrap" },
 ];
 
 export const libraries = [
   { name: "React" },
   { name: "GSAP" },
   { name: "Framer Motion" },
-  { name: "Barba.js" },
 ];
 
 export const designTools = [

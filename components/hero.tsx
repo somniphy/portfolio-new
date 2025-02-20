@@ -1,22 +1,27 @@
+import Navlink from "./navlink";
 import { TextEncrypted } from "./text-encrypted";
-
+import { ArrowRight } from "lucide-react";
 export default function Hero() {
   return (
-    <div className="px-[5.5%] relative h-full">
+    <div className="relative flex justify-center h-screen w-full ">
       <div className="inline-block mt-[12.5rem] text-wrap">
-        <h1 className="text-black dark:text-white text-9xl uppercase font-bold will-change-auto">
-          <TextEncrypted text="Design" interval={40} />
+        <div className="flex ml-2 justify-center">
+          <p className="text-black dark:text-white text-sm uppercase ">
+            <TextEncrypted text="Christian Penales Portfolio" interval={20} />
+          </p>
+        </div>
+        <h1 className="text-black dark:text-white text-9xl uppercase font-bold will-change-auto text-center">
+          <TextEncrypted text="UX/UI Designer" interval={20} />
         </h1>
-
-        <h1 className="text-black dark:text-white text-9xl uppercase font-bold will-change-auto">
-          <TextEncrypted text="— Development" interval={40} />
+        <h1 className="text-black dark:text-white text-9xl uppercase font-bold will-change-auto text-center">
+          <TextEncrypted text="Web Developer" interval={20} />
         </h1>
-      </div>
-      <div className="flex">
-        <p className="text-black dark:text-white text-sm uppercase">
-          <TextEncrypted text="Christian Penales Portfolio" interval={40} />
-    
-        </p>
+        <div className="mt-2 flex justify-center">
+          <div className="inline-flex items-center uppercase text-sm">
+            Explore my <Navlink href="/projects" title="Projects" className="px-2 uppercase text-sm font-bold text-red-600"/>
+            or<Navlink href="/contact" title="Let's build something" className="px-2 uppercase text-sm font-bold text-red-600"/>
+          </div>
+        </div>
       </div>
     </div>
   );

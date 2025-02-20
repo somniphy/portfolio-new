@@ -2,14 +2,14 @@
 import AboutSection from "@/components/about";
 import ContactSection from "@/components/contact";
 import Hero from "@/components/hero";
-import WorksSection from "@/components/works";
+import ServicesSection from "@/components/services";
 
 export default function Home() {
   return (
-    <main className="max-w-[1440px] mx-auto relative z-9 h-[100svh]">
+    <main className="max-w-screen">
       <Hero />
       <AboutSection />
-      <WorksSection />
+      <ServicesSection />
       <ContactSection />
     </main>
   );

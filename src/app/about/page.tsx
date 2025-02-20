@@ -6,7 +6,7 @@ import Education from "@/components/education";
 import ContactSection from "@/components/contact";
 export default function About() {
   return (
-    <main className="max-w-[1440px] mx-auto relative z-9 min-h-screen flex flex-col gap-16 py-12">
+    <main className="max-w-screen mx-auto relative min-h-screen flex flex-col gap-16 py-12">
       <AboutSection />
       <Skills />
       <Experience />
