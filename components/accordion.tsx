@@ -70,7 +70,7 @@ export default function Accordion({ services }: AccordionProps) {
             }}
             className="overflow-hidden h-0" // Initial height is 0
           >
-            <p className="text-white text-sm uppercase pb-4">{service.description}</p>
+            <p className="text-white text-base uppercase pb-4">{service.description}</p>
           </div>
         </div>
       ))}
