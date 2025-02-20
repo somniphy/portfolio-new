@@ -11,7 +11,6 @@ export default function About() {
       <Skills />
       <Experience />
       <Education />
-      <ContactSection />
     </main>
   );
 }

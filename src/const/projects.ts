@@ -1,8 +1,8 @@
 export const projects = [
   {
-    title: "GloomyWorks",
+    title: "GloomyEffects",
     description:
-      "GloomyWorks is a website design for a guitar pedals store I made in Figma.",
+      "GloomyEffects is a website design for a guitar pedals store I made in Figma.",
     image: "/gloomyeffectscover.png",
     link: "https://dribbble.com/shots/25587183-Modern-Pedal-Effects-Online-Store-Design",
   },

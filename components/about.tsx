@@ -28,7 +28,7 @@ export default function AboutSection() {
             <Navlink
               href="/about"
               title="More About me"
-              className="mt-4 text-sm font-medium uppercase text-red-600 rounded-full px-4 py-2 border border-white"
+              className="mt-4 font-medium uppercase text-red-600"
             />
           </div>
         </div>

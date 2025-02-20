@@ -49,7 +49,7 @@ export default function WorkCard({
         />
       </div>
       <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-        <div className="text-white p-4">
+        <div className="text-black p-4">
           <h3 className="text-4xl font-bold mb-2 uppercase">{title}</h3>
           <p className="text-sm uppercase">{description}</p>
           {link && (

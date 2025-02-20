@@ -65,23 +65,11 @@ export default function Navbar() {
       >
         <div className="flex w-full h-full">
           <div className="w-[60%] flex flex-col items-center gap-4 justify-center overflow-hidden">
-            <Image src="/logo.svg" width={200} height={420} alt="logo" />
+            <Image src="/logo.svg" width={120} height={420} alt="logo" />
             <p className="text-4xl uppercase font-bold">Christian Penales</p>
-            <div className="">
-              <p className="text-sm font-medium text-white uppercase">
-                penalescjay@gmail.com
-              </p>
-              <div className="flex gap-8">
-                {socials.map((social) => (
-                  <Navlink
-                    key={social.name}
-                    href={social.href}
-                    title={social.name}
-                    className="uppercase text-sm hover:text-red-600 transition-colors duration-100"
-                  />
-                ))}
-              </div>
-            </div>
+            <p className="text-base uppercase font-medium">
+              &copy;{" "}{new Date().getFullYear()}
+            </p>
           </div>
           <div className="w-[40%] flex flex-col items-center justify-center bg-transparent gap-[100px] z-40">
             <div className="top-6 right-6 fixed">
@@ -92,18 +80,27 @@ export default function Navbar() {
                 Close
               </button>
             </div>
-            <div className="">
-              <div className="flex flex-col gap-2">
-                {navigation.map((link) => (
-                  <Navlink
-                    key={link.name}
-                    href={link.href}
-                    title={link.name}
-                    onClick={closeMenu}
-                    className="uppercase text-7xl font-bold  hover:text-red-600 transition-colors duration-100"
-                  />
-                ))}
-              </div>
+
+            <div className="flex flex-col gap-2">
+              {navigation.map((link) => (
+                <Navlink
+                  key={link.name}
+                  href={link.href}
+                  title={link.name}
+                  onClick={closeMenu}
+                  className="uppercase text-6xl font-bold  hover:text-red-600 transition-colors duration-100"
+                />
+              ))}
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {socials.map((social) => (
+                <Navlink
+                  key={social.name}
+                  href={social.href}
+                  title={social.name}
+                  className="uppercase font-bold text-2xl hover:text-red-600 transition-colors duration-100"
+                />
+              ))}
             </div>
           </div>
         </div>
