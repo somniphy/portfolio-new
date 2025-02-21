@@ -1,67 +1,50 @@
-import Accordion from './accordion';
-import { TextEncrypted } from './text-encrypted';
- // Import the Accordion component
-import { webdevservices, designservices, brandingservices } from '@/const/services'; // Import the service data
+import Accordion from "./accordion";
+import { TextEncrypted } from "./text-encrypted";
+import { webdevservices, designservices } from "@/const/services";
 
 export default function ServicesSection() {
   return (
-    <div className="relative min-h-screen px-8 w-screen flex items-center justify-center mb-36">
-      <div className="w-full flex flex-col">
+    <div className="relative min-h-screen px-4 md:px-8 w-full flex items-center justify-center">
+      <div className="w-full max-w-7xl flex flex-col">
+        {/* Section Title */}
         <div className="flex flex-col">
           <TextEncrypted
             text="Services"
             className="text-6xl font-bold text-white uppercase"
           />
         </div>
-        <div className="flex justify-between items-start mt-4">
-          <div className="flex gap-4 items-start">
+
+        {/* Web Development Section */}
+        <div className="flex flex-col md:flex-row justify-between items-start mt-8 md:mt-12">
+          <div className="flex gap-2 md:gap-4 items-start">
             <TextEncrypted
-              text="01 —"
-              className="text-4xl font-bold text-red-600 uppercase"
+              text="01"
+              className="text-2xl md:text-4xl font-bold text-red-600 uppercase"
             />
             <TextEncrypted
               text="Web Development"
-              className="text-7xl font-bold text-red-600 uppercase"
+              className="text-6xl md:text-7xl font-bold text-red-600 uppercase"
             />
           </div>
-          <div className="w-1/3">
-            {/* Pass webdevservices to the Accordion */}
+          <div className="w-full md:w-1/3 mt-4 md:mt-0">
             <Accordion services={webdevservices} />
           </div>
         </div>
 
-        {/* Add more sections for design and branding services */}
-        <div className="flex justify-between items-start mt-12">
-          <div className="flex gap-4 items-start">
+        {/* Design Section */}
+        <div className="flex flex-col md:flex-row justify-between items-start mt-8 md:mt-12">
+          <div className="flex gap-2 md:gap-4 items-start">
             <TextEncrypted
-              text="02 —"
-              className="text-4xl font-bold text-red-600 uppercase"
+              text="02"
+              className="text-2xl md:text-4xl font-bold text-red-600 uppercase"
             />
             <TextEncrypted
-              text="Design Services"
-              className="text-7xl font-bold text-red-600 uppercase"
+              text="Design"
+              className="text-6xl md:text-7xl font-bold text-red-600 uppercase"
             />
           </div>
-          <div className="w-1/3">
-            {/* Pass designservices to the Accordion */}
+          <div className="w-full md:w-1/3 mt-4 md:mt-0">
             <Accordion services={designservices} />
-          </div>
-        </div>
-
-        <div className="flex justify-between items-start mt-12">
-          <div className="flex gap-4 items-start">
-            <TextEncrypted
-              text="03 —"
-              className="text-4xl font-bold text-red-600 uppercase"
-            />
-            <TextEncrypted
-              text="Branding Services"
-              className="text-7xl font-bold text-red-600 uppercase"
-            />
-          </div>
-          <div className="w-1/3">
-            {/* Pass brandingservices to the Accordion */}
-            <Accordion services={brandingservices} />
           </div>
         </div>
       </div>

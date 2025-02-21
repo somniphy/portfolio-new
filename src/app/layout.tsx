@@ -34,7 +34,7 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
-          {/* <IntroLoader /> */}
+          <IntroLoader />
           <SmoothScroll>
             <Navbar />
             

@@ -88,7 +88,7 @@ export default function IntroLoader() {
           ref={textRef}
           className="text-white mt-4 text-sm uppercase tracking-wider opacity-0"
         >
-          Web Developer & Designer
+          Web Developer & UI/UX Designer
         </h2>
       </div>
     </div>

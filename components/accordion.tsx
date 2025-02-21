@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import gsap from 'gsap';
+import { Minus, Plus } from 'lucide-react';
 
 // Define the type for each service item
 interface Service {
@@ -52,16 +53,16 @@ export default function Accordion({ services }: AccordionProps) {
   return (
     <div className="space-y-4">
       {services.map((service, index) => (
-        <div key={index} className="border-b border-gray-700">
+        <div key={index} className="border-b border-zinc-700">
           <button
             onClick={() => toggleAccordion(index)}
             className="w-full flex justify-between items-center py-4 text-left focus:outline-none"
           >
-            <span className="text-white text-xl uppercase font-medium">
+            <span className="text-white text-xl uppercase font-bold">
               {service.title}
             </span>
-            <span className="text-white text-xl">
-              {openIndex === index ? '-' : '+'}
+            <span className="text-white text-xl transition duration-300">
+              {openIndex === index ? <Minus /> : <Plus />}
             </span>
           </button>
           <div

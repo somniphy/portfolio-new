@@ -55,7 +55,7 @@ export default function WorkCard({
           {link && (
             <Link
               href={link}
-              className="inline-block text-sm uppercase border-b border-white hover:opacity-70 transition-opacity"
+              className="inline-block text-sm uppercase border-b border-white hover:opacity-10 transition-opacity"
             >
               View Project
             </Link>
