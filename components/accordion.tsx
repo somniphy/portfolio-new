@@ -61,7 +61,7 @@ export default function Accordion({ services }: AccordionProps) {
             <span className="text-white text-xl uppercase font-bold">
               {service.title}
             </span>
-            <span className="text-white text-xl transition duration-300">
+            <span className="text-red-600 text-xl rotate-12 transition duration-300">
               {openIndex === index ? <Minus /> : <Plus />}
             </span>
           </button>

@@ -4,13 +4,13 @@ import Navlink from "./navlink";
 
 export default function AboutSection() {
   return (
-    <div className="relative min-h-screen px-4 md:px-6 w-full flex items-center justify-center">
-      <div className="w-full max-w-7xl flex flex-col">
+    <div className="relative min-h-96 md:min-h-screen container max-w-screen px-6 mx-auto ">
+      <div className="max-w-dvw flex flex-col">
         {/* Section Title */}
         <div className="flex flex-col">
           <TextEncrypted
             text="About"
-            className="text-6xl font-bold text-white uppercase"
+            className="text-6xl md:text-7xl lg:text-8xl font-bold text-white uppercase"
           />
         </div>
 

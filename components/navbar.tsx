@@ -37,8 +37,8 @@ export default function Navbar() {
   };
 
   return (
-    <div className="flex">
-      <nav className="flex justify-between items-center p-6 w-full fixed top-0 z-4 md:bg-transparent">
+    <header className="flex max-w-screen overflow-x-hidden">
+      <nav className="container mx-auto flex justify-between items-center p-6 fixed top-0 z-4 bg-transparent max-w-screen">
         <Link href="/" className="flex justify-center items-center gap-2">
           <Image
             src="logo.svg"
@@ -47,7 +47,7 @@ export default function Navbar() {
             alt="Logo"
             className="logo"
           />
-          <p className="text-sm uppercase font-medium text-white mix-blend-difference">
+          <p className="text-sm uppercase font-medium mix-blend-difference">
             Christian Penales
           </p>
         </Link>
@@ -66,8 +66,8 @@ export default function Navbar() {
         <div className="flex flex-col md:flex-row w-full h-full">
           <div className="w-full md:w-[60%] flex flex-col items-center gap-4 justify-center overflow-hidden p-4">
             <Image src="/logo.svg" width={120} height={420} alt="logo" />
-            <p className="text-2xl md:text-4xl uppercase font-bold">Christian Penales</p>
-            <p className="text-base uppercase font-medium">
+            <p className="text-xl md:text-4xl uppercase font-bold">Christian Penales</p>
+            <p className="text-sm uppercase font-medium">
               &copy; {new Date().getFullYear()}
             </p>
           </div>
@@ -92,7 +92,7 @@ export default function Navbar() {
                 />
               ))}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full text-center">
+            <div className="grid grid-cols-2 md:flex gap-2 w-full text-center">
               {socials.map((social) => (
                 <Navlink
                   key={social.name}
@@ -105,6 +105,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 }

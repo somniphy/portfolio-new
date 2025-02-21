@@ -8,12 +8,15 @@ import Navlink from "./navlink";
 
 export default function WorksSection() {
   return (
-    <section className="relative min-h-screen px-4 md:px-6 w-full flex flex-col items-center justify-center">
+    <section className="relative min-h-screen mt-24 px-4 max-w-screen flex flex-col">
       {/* Section Title and Link */}
-      <div className="flex flex-col justify-between items-center mb-8 md:mb-12">
-        <h1 className="text-white text-6xl tracking-wide uppercase font-bold will-change-auto">
-          <TextEncrypted text="Projects" interval={50} />
-        </h1>
+      <div className="inline-block">
+        <TextEncrypted
+          text="Projects"
+          interval={50}
+          className="text-white text-6xl md:text-7xl lg:text-8xl tracking-wide uppercase font-bold will-change-auto"
+        />
+
         <Navlink
           href="/projects"
           title="VIew All Projects"
