@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${figtree.variable} antialiased min-h-screen`}
+        className={`${figtree.variable} antialiased min-h-screen w-screen overflow-x-hidden `}
       >
         <ThemeProvider
           attribute="class"

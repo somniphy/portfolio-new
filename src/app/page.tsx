@@ -7,7 +7,7 @@ import WorksSection from "@/components/works";
 
 export default function Home() {
   return (
-    <main className="max-w-screen">
+    <main>
       <Hero />
       <AboutSection />
       <ServicesSection />

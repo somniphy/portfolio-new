@@ -37,8 +37,8 @@ export default function Navbar() {
   };
 
   return (
-    <header className="flex max-w-screen overflow-x-hidden">
-      <nav className="container mx-auto flex justify-between items-center p-6 fixed top-0 z-4 bg-transparent max-w-screen">
+    <header className="fixed top-0 z-4 w-screen">
+      <nav className="flex justify-between items-center container mx-auto pt-6">
         <Link href="/" className="flex justify-center items-center gap-2">
           <Image
             src="logo.svg"
@@ -66,7 +66,9 @@ export default function Navbar() {
         <div className="flex flex-col md:flex-row w-full h-full">
           <div className="w-full md:w-[60%] flex flex-col items-center gap-4 justify-center overflow-hidden p-4">
             <Image src="/logo.svg" width={120} height={420} alt="logo" />
-            <p className="text-xl md:text-4xl uppercase font-bold">Christian Penales</p>
+            <p className="text-xl md:text-4xl uppercase font-bold">
+              Christian Penales
+            </p>
             <p className="text-sm uppercase font-medium">
               &copy; {new Date().getFullYear()}
             </p>

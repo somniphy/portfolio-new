@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ReactLenis, { LenisRef } from "lenis/react";
 import { useRef } from "react";
+gsap.registerPlugin(useGSAP);
 
 export default function SmoothScroll({ children }: Readonly<{
   children: React.ReactNode;

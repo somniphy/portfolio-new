@@ -1,10 +1,11 @@
 import Accordion from "./accordion";
 import { TextEncrypted } from "./text-encrypted";
 import { webdevservices, designservices } from "@/const/services";
+import TextStagger from "./text-stagger";
 
 export default function ServicesSection() {
   return (
-    <div className="relative min-h-96 md:min-h-screen px-4 mt-24 md:mt-0">
+    <div className="container mx-auto relative flex justify-center w-screen h-screen sm:mt-24">
       <div className="w-full max-w-screen flex flex-col">
         {/* Section Title */}
         <div className="flex flex-col">
@@ -21,10 +22,9 @@ export default function ServicesSection() {
               text="01"
               className="text-2xl md:text-4xl font-bold text-red-600 uppercase"
             />
-            <TextEncrypted
-              text="Web Development"
-              className="text-4xl md:text-7xl font-bold text-red-600 uppercase "
-            />
+            <TextStagger className="text-4xl md:text-7xl font-bold text-red-600 uppercase ">
+              Web Development
+            </TextStagger>
           </div>
           <div className="w-full md:w-1/3 mt-4 md:mt-0">
             <Accordion services={webdevservices} />
@@ -38,10 +38,9 @@ export default function ServicesSection() {
               text="02"
               className="text-2xl md:text-4xl font-bold text-red-600 uppercase"
             />
-            <TextEncrypted
-              text="Design"
-              className="text-4xl md:text-7xl font-bold text-red-600 uppercase"
-            />
+            <TextStagger className="text-4xl md:text-7xl font-bold text-red-600 uppercase ">
+              Design
+            </TextStagger>
           </div>
           <div className="w-full md:w-1/3 mt-4 md:mt-0">
             <Accordion services={designservices} />

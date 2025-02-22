@@ -21,7 +21,7 @@ export default function Navlink({
   return (
     <Link
       className={clsx(
-        "group relative z-10 w-fit cursor-pointer overflow-hidden",
+        "group relative z-2 w-fit cursor-pointer overflow-hidden",
         containerClass,
         className
       )}
