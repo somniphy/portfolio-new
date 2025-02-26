@@ -1,7 +1,7 @@
 import Skills from "@/components/skills";
 import Experience from "@/components/experience";
 import Education from "@/components/education";
-import Navlink from "@/components/navlink";
+
 
 import { TextEncrypted } from "@/components/text-encrypted";
 import TextStagger from "@/components/text-stagger";
