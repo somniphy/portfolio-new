@@ -5,7 +5,7 @@ import TextStagger from "./text-stagger";
 
 export default function ServicesSection() {
   return (
-    <div className="container mx-auto relative flex justify-center w-screen h-screen sm:mt-24">
+    <div className="container mx-auto relative flex justify-center w-screen min-h-screen mt-24">
       <div className="w-full max-w-screen flex flex-col">
         {/* Section Title */}
         <div className="flex flex-col">
@@ -20,9 +20,9 @@ export default function ServicesSection() {
           <div className="flex gap-2 md:gap-4 items-start">
             <TextEncrypted
               text="01"
-              className="text-2xl md:text-4xl font-bold text-red-600 uppercase"
+              className="text-2xl md:text-4xl font-bold  text-orange-600 uppercase"
             />
-            <TextStagger className="text-4xl md:text-7xl font-bold text-red-600 uppercase ">
+            <TextStagger className="text-4xl md:text-7xl font-bold  text-orange-600 uppercase ">
               Web Development
             </TextStagger>
           </div>
@@ -36,9 +36,9 @@ export default function ServicesSection() {
           <div className="flex gap-2 md:gap-4 items-start">
             <TextEncrypted
               text="02"
-              className="text-2xl md:text-4xl font-bold text-red-600 uppercase"
+              className="text-2xl md:text-4xl font-bold  text-orange-600 uppercase"
             />
-            <TextStagger className="text-4xl md:text-7xl font-bold text-red-600 uppercase ">
+            <TextStagger className="text-4xl md:text-7xl font-bold  text-orange-600 uppercase ">
               Design
             </TextStagger>
           </div>

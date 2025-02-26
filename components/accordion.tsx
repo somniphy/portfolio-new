@@ -84,7 +84,7 @@ export default function Accordion({ services }: AccordionProps) {
               ref={(el) => {
                 if (el) iconRefs.current[index] = el; // Assign ref to each icon element
               }}
-              className="text-red-600 text-xl transition duration-300"
+              className=" text-orange-600 text-xl transition duration-300"
             >
               {openIndex === index ? <Minus /> : <Plus />}
             </span>

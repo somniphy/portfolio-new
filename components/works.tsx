@@ -21,7 +21,7 @@ export default function WorksSection() {
           <Navlink
             href="/projects"
             title="VIew All Projects"
-            className="text-red-600 text-sm md:text-base tracking-wide uppercase font-medium flex gap-2 will-change-auto items-center mt-4"
+            className=" text-orange-600 text-sm md:text-base tracking-wide uppercase font-medium flex gap-2 will-change-auto items-center mt-4"
           ></Navlink>
         </div>
 

@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useEffect, useState } from "react";
 
-
 interface WorkCardProps {
   title: string;
   description: string;
@@ -41,15 +40,14 @@ export default function WorkCard({
           src={image}
           alt={title}
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="transition-transform duration-300 ease-out object-cover group-hover:scale-105"
+          className="transition-transform duration-300 ease-out object-cover group-hover:scale-105 h-[400px]"
           style={{
             transform: `translateY(${parallaxOffset}px)`,
           }}
         />
       </div>
       <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-        <div className="text-black p-4">
+        <div className=" text-orange-600 p-4">
           <h3 className="text-4xl font-bold mb-2 uppercase">{title}</h3>
           <p className="text-sm uppercase">{description}</p>
           {link && (
@@ -62,7 +60,6 @@ export default function WorkCard({
           )}
         </div>
       </div>
-      
     </div>
   );
 }

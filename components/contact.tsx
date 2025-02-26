@@ -1,6 +1,7 @@
 import Navlink from "./navlink";
 import { socials } from "@/const/socials";
 import { TextEncrypted } from "./text-encrypted";
+import Link from "next/link";
 
 export default function ContactSection() {
   return (
@@ -12,10 +13,10 @@ export default function ContactSection() {
         <div className="md:flex items-start justify-between">
           <h2 className="text-sm md:text-4xl font-medium text-white uppercase max-w-3xl">
             I am always open to new opportunities and collaborations. If you
-            have any questions or want to work together,
-            <span className="text-red-600 font-bold">
+            have any questions or want to work together,{" "}
+            <Link href="mailto:chan_penales@yahoo.com" className="text-orange-600 font-bold">
               feel free to reach out.
-            </span>
+            </Link>
           </h2>
           <div className="mt-4 md:mt-0 flex flex-col">
             {socials.map((social) => (
@@ -23,7 +24,7 @@ export default function ContactSection() {
                 key={social.name}
                 href={social.href}
                 title={social.name}
-                className="uppercase font-bold text-3xl hover:text-red-600"
+                className="uppercase font-bold text-3xl hover:text-orange-600 text-white"
               />
             ))}
           </div>

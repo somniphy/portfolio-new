@@ -1,21 +1,7 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #121212;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #121212;
-    --foreground: #ffffff;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: "Figtree", Helvetica, sans-serif;
+  font-family: "Inter", Helvetica, sans-serif;
 }
 
 /* .page-transition {
@@ -34,12 +20,12 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #141414;
+    background: oklch(0.274 0.006 286.033);
     color: #fdfdfd;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: var(--font-geist-sans);
+    font-family: var(--font-inter);
     font-size: 14px;
     justify-content: center;
     clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);

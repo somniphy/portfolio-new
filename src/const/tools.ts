@@ -22,7 +22,6 @@ export const designTools = [
   { name: "Figma" },
   { name: "Illustrator" },
   { name: "Photoshop" },
-  { name: "Draw.io" },
 ];
 
 

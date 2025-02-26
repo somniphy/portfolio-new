@@ -33,8 +33,8 @@ export default function TextStagger({ children, className }: TextStaggerProps) {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current, // Use the container as the trigger
-          start: "top 70%", // Start the animation when the top of the container is 70% from the top of the viewport
-          end: "bottom 30%", // End the animation when the bottom of the container is 30% from the top of the viewport
+          start: "top 80%", // Start the animation when the top of the container is 70% from the top of the viewport
+          end: "bottom 20%", // End the animation when the bottom of the container is 30% from the top of the viewport
           toggleActions: "play none none reverse", // Play the animation when scrolling down, reverse when scrolling up
           scrub: true, // Smoothly scrub through the animation on scroll
           // pin: true, // Pin the container while the animation is active

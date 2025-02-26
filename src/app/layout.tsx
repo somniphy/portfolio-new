@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Figtree } from "next/font/google";
+import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import SmoothScroll from "@/components/smooth-scroll";
 import IntroLoader from "@/components/intro-loader";
 
-const figtree = Figtree({
-  variable: "--font-figtree",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${figtree.variable} antialiased min-h-screen w-screen overflow-x-hidden `}
+        className={`${inter.variable} antialiased min-h-screen w-screen overflow-x-hidden bg-zinc-800 `}
       >
         <ThemeProvider
           attribute="class"
@@ -33,7 +33,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* <IntroLoader /> */}
+          <IntroLoader />
           <SmoothScroll>
             <Navbar />
 
