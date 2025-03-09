@@ -2,37 +2,39 @@ import { TextEncrypted } from "./text-encrypted";
 import Navlink from "./navlink";
 import TextStagger from "./text-stagger";
 import Skills from "./skills";
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <div className="container mx-auto relative flex justify-center w-screen min-h-[30dvh] overflow-x-hidden md:px-0 px-4 mt-4">
-      {/* Section Title */}
-      <div className="w-full h-[50%]">
+    <div className="container mx-auto relative flex justify-center w-screen min-h-screen overflow-x-hidden">
+      <div className="w-full flex flex-col justify-center">
         <TextEncrypted
           text="About"
-          className="text-6xl md:text-7xl lg:text-8xl font-bold text-white uppercase"
+         className="text-6xl md:text-7xl lg:text-8xl font-figtree font-bold text-black uppercase"
         />
-        <TextStagger className="text-2xl md:text-3xl lg:text-4xl text-white uppercase font-medium md:mt-4">
-          {/* Description */}A
-          <span className="text-orange-600 px-2">Web Developer</span>
-          and<span className="text-orange-600 px-2">UI/UX Designer</span>
-          with a knack for creating intuitive, user-centered digital
-          experiences. With a strong foundation in both design and development,
-          I bridge the gap between{" "}
-          <span className="italic px-2">aesthetics</span>&
-          <span className="font-bold px-2"> functionality.</span>
-        </TextStagger>
+        <div className="flex justify-between items-center">
+          <TextStagger className="text-2xl text-black uppercase font-medium md:mt-8 font-figtree w-[80%]">
+            A<span className="text-cyber-yellow px-2">Web Developer</span>
+            and<span className="text-cyber-yellow px-2">UI/UX Designer</span>
+            with a knack for creating intuitive, user-centered digital
+            experiences. With a strong foundation in both design and
+            development, I bridge the gap between aesthetics and functionality.
+          </TextStagger>
+          <Image src="/logo.svg" alt="logo" width={480} height={480} />
+        </div>
+
 
         {/* Link to More About Me */}
-        <div className="flex justify-center md:justify-start">
-          
+        <div className="my-8">
           <Navlink
             href="/about"
             title="More About me"
-            className="mt-4 font-medium uppercase text-xl text-orange-600"
+            className="mt-4 font-medium uppercase text-sm text-white font-kode bg-black py-3 px-6"
           />
         </div>
-        <Skills />
+        <div className="mt-6">
+          <Skills />
+        </div>
       </div>
     </div>
   );

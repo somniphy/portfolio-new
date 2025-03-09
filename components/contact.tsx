@@ -7,14 +7,14 @@ export default function ContactSection() {
   return (
     <div className="container mx-auto relative flex justify-center w-screen h-96 sm:mt-24">
       <div className="w-full max-w-screen flex flex-col">
-        <h2 className="text-white text-6xl md:text-7xl lg:text-8xl tracking-wide uppercase font-bold will-change-auto">
+        <h2 className="text-black text-6xl md:text-7xl lg:text-8xl tracking-wide uppercase font-bold font-figtree will-change-auto">
           <TextEncrypted text="Contact" interval={50} />
         </h2>
         <div className="md:flex items-start justify-between">
-          <h2 className="text-sm md:text-4xl font-medium text-white uppercase max-w-3xl">
+          <h2 className="text-3xl font-medium text-black uppercase max-w-3xl font-figtree">
             I am always open to new opportunities and collaborations. If you
             have any questions or want to work together,{" "}
-            <Link href="mailto:chan_penales@yahoo.com" className="text-orange-600 font-bold">
+            <Link href="mailto:chan_penales@yahoo.com" className="text-cyber-yellow font-bold">
               feel free to reach out.
             </Link>
           </h2>
@@ -24,7 +24,7 @@ export default function ContactSection() {
                 key={social.name}
                 href={social.href}
                 title={social.name}
-                className="uppercase font-bold text-3xl hover:text-orange-600 text-white"
+                className="uppercase font-medium text-3xl font-figtree hover:text-cyber-yellow text-black"
               />
             ))}
           </div>

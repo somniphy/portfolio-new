@@ -38,36 +38,34 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 z-4 w-screen flex items-center h-19">
-      <nav className="flex justify-between items-center container mx-auto px-4 md:px-0">
+    <header className="fixed top-0 w-screen flex h-19">
+      <nav className="flex justify-between items-center container mx-auto font-figtree">
         <Link
           href="/"
           className="flex justify-center items-center gap-2 z-[999]"
         >
           <Image
             src="logo.svg"
-            height="32"
-            width="32"
+            height="24"
+            width="24"
             alt="Logo"
             className="logo"
           />
-          <p className="text-base uppercase text-orange-600 font-medium mix-blend-difference">
-            Christian Penales
-          </p>
+          <p className="text-sm uppercase font-medium">Christian Penales</p>
         </Link>
         {!isMenuOpen ? (
           <button
             onClick={openMenu}
-            className="text-base uppercase font-medium text-orange-600 cursor-crosshair z-[999]"
+            className="text-sm uppercase font-medium text-zinc-950 cursor-crosshair z-[999]"
           >
             Menu
           </button>
         ) : (
           <button
             onClick={closeMenu}
-            className="text-sm uppercase font-medium text-white cursor-crosshair z-[999]"
+            className="text-white cursor-crosshair z-[999]"
           >
-           <XIcon />
+            <XIcon />
           </button>
         )}
       </nav>
@@ -79,10 +77,10 @@ export default function Navbar() {
         <div className="flex flex-col md:flex-row max-w-screen-2xl h-full container mx-auto">
           <div className="w-full md:w-[60%] flex flex-col items-center gap-4 justify-center overflow-hidden p-4">
             <Image src="/logo.svg" width={120} height={420} alt="logo" />
-            <p className="text-xl md:text-4xl uppercase font-bold">
+            <p className="text-xl md:text-4xl uppercase font-bold font-figtree">
               Christian Penales
             </p>
-            <p className="text-sm uppercase font-medium">
+            <p className="text-sm uppercase font-medium font-kode">
               &copy; {new Date().getFullYear()}
             </p>
           </div>
@@ -94,7 +92,7 @@ export default function Navbar() {
                   href={link.href}
                   title={link.name}
                   onClick={closeMenu}
-                  className="uppercase text-3xl md:text-6xl font-bold hover:text-orange-600 transition-colors duration-100"
+                  className="uppercase text-3xl md:text-6xl font-bold hover:text-cyber-yellow font-figtree transition-colors duration-100"
                 />
               ))}
             </div>
@@ -104,7 +102,7 @@ export default function Navbar() {
                   key={social.name}
                   href={social.href}
                   title={social.name}
-                  className="uppercase font-bold text-xl md:text-2xl hover:text-orange-600 transition-colors duration-100"
+                  className="uppercase font-bold text-xl md:text-2xl font-figtree hover:text-cyber-yellow transition-colors duration-100"
                 />
               ))}
             </div>

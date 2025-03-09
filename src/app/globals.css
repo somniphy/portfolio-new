@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-body {
-  font-family: "Inter", Helvetica, sans-serif;
-}
-
 /* .page-transition {
   position: relative;
   width: 100%;
@@ -12,8 +8,12 @@ body {
   will-change: opacity, transform;
 } */
 
-@layer utilities {
+@theme {
+  --font-kode: "Kode Mono", sans-serif;
+  --font-figtree: "Figtree", sans-serif;
+}
 
+@layer utilities {
   .menu-overlay {
     position: fixed;
     top: 0;
@@ -35,12 +35,11 @@ body {
     transition: clip-path 0.3s ease-in-out;
     text-transform: uppercase;
   }
-  
+
   .menu-overlay .menu-open {
     pointer-events: auto;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
-
 
   .menu-close {
     font-size: 14px;
@@ -50,7 +49,4 @@ body {
     color: #fff;
     transition: color 0.3s ease;
   }
-  
-  
-  
 }

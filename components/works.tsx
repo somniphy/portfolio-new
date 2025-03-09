@@ -5,33 +5,68 @@ import { projects } from "@/const/projects";
 import WorkCard from "./work-card";
 
 import Navlink from "./navlink";
+import TextStagger from "./text-stagger";
 
 export default function WorksSection() {
   return (
-    <div className="container mx-auto relative flex justify-center w-screen h-screen sm:mt-24">
+    <div className="container mx-auto relative flex justify-center w-screen min-h-screen sm:mt-24">
       <div className="w-full max-w-screen flex flex-col">
-        {/* Section Title and Link */}
         <div className="inline-block">
-          <TextEncrypted
-            text="Projects"
-            interval={50}
-            className="text-white text-6xl md:text-7xl lg:text-8xl tracking-wide uppercase font-bold will-change-auto"
-          />
-
           <Navlink
             href="/projects"
             title="VIew All Projects"
-            className=" text-orange-600 text-sm md:text-base tracking-wide uppercase font-medium flex gap-2 will-change-auto items-center mt-4"
-          ></Navlink>
+            className=" text-white font-figtree text-sm tracking-wide uppercase font-medium flex gap-2 will-change-auto items-center bg-black py-4 px-6"
+          />
         </div>
 
         {/* Projects Grid */}
-        <div className="w-full max-w-7xl">
-          <div className="w-full mt-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {projects.map((project) => (
-                <WorkCard key={project.title} {...project} />
-              ))}
+        <div className="grid grid-cols-3 gap-2 mt-2">
+          <div className="flex flex-col justify-between h-[80svh] col-span-2 p-5 relative bg-black/20">
+            <TextEncrypted
+              text="01"
+              className="text-black font-kode text-9xl"
+            />
+            <div className="text-right absolute bottom-5 right-5 font-figtree uppercase font-medium">
+              <h1 className="text-2xl text-black">Project 1</h1>
+              <p className="text-sm text-black">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col justify-between h-[80svh] p-5 relative bg-black/20">
+            <TextEncrypted
+              text="02"
+              className="text-cyber-yellow font-kode text-9xl"
+            />
+            <div className="text-right absolute bottom-5 right-5 font-figtree uppercase font-medium px-2">
+              <h1 className="text-2xl text-black">Project 2</h1>
+              <p className="text-sm text-black ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col justify-between h-[80svh] p-5 relative bg-black/20">
+            <div className="text-right font-figtree uppercase font-medium px-2">
+              <h1 className="text-2xl text-black">Project 3</h1>
+              <p className="text-sm text-cyber-yellow ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <TextEncrypted
+              text="03"
+              className="text-cyber-yellow font-kode text-9xl"
+            />
+          </div>
+          <div className="flex flex-col justify-between h-[80svh] col-span-2 p-5 relative bg-black/20">
+            <TextEncrypted
+              text="04"
+              className="text-cyber-gray font-kode text-9xl text-right"
+            />
+            <div className="text-left absolute bottom-5 left-5 font-figtree uppercase font-medium">
+              <h1 className="text-2xl text-cyber-black">Project 4</h1>
+              <p className="text-sm ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
             </div>
           </div>
         </div>
