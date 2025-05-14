@@ -39,7 +39,7 @@ export default function Navbar() {
     <header className="fixed top-0 w-full flex z-40">
       <nav className="flex justify-between items-center container mx-auto">
         <Link href="/" className="flex justify-center items-center gap-2 mix-blend-difference">
-          <span className="text-xs uppercase font-medium text-zinc-100">Christian Penales</span>
+          <span className="text-sm font-medium text-zinc-100">Christian Penales</span>
         </Link>
         <div className="">
           <div className="flex flex-row gap-4 py-6 w-full text-center">
@@ -49,7 +49,7 @@ export default function Navbar() {
                 href={link.href}
                 title={link.name}
                 onClick={closeMenu}
-                className="uppercase font-medium text-xs text-zinc-100"
+                className="font-medium text-sm text-zinc-100"
               />
             ))}
           </div>
