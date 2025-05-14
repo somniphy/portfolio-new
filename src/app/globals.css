@@ -1,52 +1,5 @@
 @import "tailwindcss";
 
-/* .page-transition {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  opacity: 1;
-  will-change: opacity, transform;
-} */
-
 @theme {
-  --font-kode: "Kode Mono", sans-serif;
-  --font-figtree: "Figtree", sans-serif;
-}
-
-@layer utilities {
-  .menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: oklch(0.274 0.006 286.033);
-    color: #fdfdfd;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: var(--font-inter);
-    font-size: 14px;
-    justify-content: center;
-    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-    overflow: hidden;
-    z-index: 40;
-    pointer-events: none;
-    transition: clip-path 0.3s ease-in-out;
-    text-transform: uppercase;
-  }
-
-  .menu-overlay .menu-open {
-    pointer-events: auto;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  }
-
-  .menu-close {
-    font-size: 14px;
-    /* padding: 2px 5px; */
-    font-weight: 500;
-    font-family: var(--font-geist-sans);
-    color: #fff;
-    transition: color 0.3s ease;
-  }
+  --font-inter: "Inter Tight", sans-serif;
 }

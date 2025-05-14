@@ -19,7 +19,7 @@ export default function Navlink({
 
 }: NavlinkProps) {
   return (
-    <Link
+    <Link 
       className={clsx(
         "group relative z-2 w-fit cursor-pointer overflow-hidden",
         containerClass,
