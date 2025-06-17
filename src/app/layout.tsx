@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
-import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import SmoothScroll from "@/components/smooth-scroll";
 import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+
 // import IntroLoader from "@/components/intro-loader";
 
 const inter = Inter_Tight({
@@ -28,19 +27,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased min-h-screen overflow-x-hidden font-inter bg-zinc-900`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {/* <IntroLoader /> */}
-          <SmoothScroll>
-           <Navbar />
-            {children}
-          </SmoothScroll>
-          <Footer />
-        </ThemeProvider>
+        {/* <IntroLoader /> */}
+        <SmoothScroll>
+          <Navbar />
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

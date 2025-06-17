@@ -2,10 +2,15 @@
 
 import { useRef } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+
 import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
+
+
 
 const works = [
   { title: "GloomyEffects", image: "/gloomyeffectshero.png" },
@@ -15,25 +20,42 @@ const works = [
 ];
 
 export default function WorksSection() {
-  const workItemRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef(null);
 
-  useGSAP(()=>{
-    
-  }, [])
+  useGSAP(() => {
+    const items = gsap.utils.toArray(".work-item");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    items.forEach((item: any, index: number) => {
+      gsap.fromTo(
+        item,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+          delay: index * 0.1, // staggered entrance
+        }
+      );
+    });
+  }, []);
+
   return (
-    <section className="relative px-4 py-24">
+    <section ref={containerRef} className="relative px-4 py-24">
       <div className="container mx-auto">
-        <p className="text-sm text-zinc-400 uppercase mb-4 font-medium">
+        <p className="text-sm text-zinc-400 uppercase mb-4 font-medium text-center">
           Works
         </p>
 
-        <ul className="grid grid-cols-1 md:grid-cols-2 space-y-4 gap-4">
+        <ul className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
           {works.map((work, i) => (
-            <li key={i} className="relative z-10 cursor-pointer">
-              <div
-                ref={workItemRef}
-                className="w-full h-auto overflow-hidden shadow-lg"
-              >
+            <li key={i} className="relative z-10 cursor-pointer work-item">
+              <div className="w-full h-auto overflow-hidden shadow-lg">
                 <Image
                   src={work.image}
                   alt={work.title}
@@ -51,15 +73,6 @@ export default function WorksSection() {
             </li>
           ))}
         </ul>
-
-        <div className="mt-4">
-          <Link
-            href="/works"
-            className="text-zinc-400 text-xs underline uppercase"
-          >
-            More Works
-          </Link>
-        </div>
       </div>
     </section>
   );

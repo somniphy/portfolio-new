@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
@@ -31,6 +31,11 @@ export default function SplitTextImageRow({
 
     if (!container || !left || !right || !imageWrapper) return;
 
+    // Only run animations on screens wider than 768px
+    const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+
+    if (!isDesktop) return; // Skip if on mobile
+
     const handleEnter = () => {
       gsap.to(left, { x: "-60px", duration: 0.5, ease: "power2.out" });
       gsap.to(right, { x: "60px", duration: 0.5, ease: "power2.out" });
@@ -54,7 +59,7 @@ export default function SplitTextImageRow({
   return (
     <div
       ref={containerRef}
-      className="flex items-center justify-center text-zinc-200 font-medium text-xl md:text-6xl lg:text-8xl"
+      className="flex items-center justify-center text-zinc-200 font-bold text-4xl md:text-6xl "
     >
       <div ref={leftRef}>{leftText}</div>
 
@@ -65,9 +70,9 @@ export default function SplitTextImageRow({
         <Image
           src={imageSrc}
           alt="split reveal"
-          width={128}
-          height={128}
-          className="object-contain"
+          width={800}
+          height={400}
+          className="object-cover aspect-video"
         />
       </div>
 

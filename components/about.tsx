@@ -12,7 +12,7 @@ export default function AboutSection() {
               About Me
             </h1>
           <TextStagger className="text-xl font-light md:text-3xl text-zinc-200">
-              Hi, I'm Christian Jay, a passionate and detail-oriented Freelance
+              Hi, I&apos;m Christian Jay, a passionate and detail-oriented Freelance
               Web Developer and Web Designer with 3 years of experience crafting
               visually stunning, user-friendly, and responsive web applications.
               I specialize in turning creative ideas into seamless digital

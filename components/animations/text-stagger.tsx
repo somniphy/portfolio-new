@@ -57,7 +57,7 @@ export default function TextStagger({ children, className }: TextStaggerProps) {
   }, []);
 
   return (
-    <div ref={containerRef} className="">
+    <div ref={containerRef}>
       {/* div tag with custom class */}
       <div ref={textRef} className={className}>
         {children}

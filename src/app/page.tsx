@@ -1,108 +1,98 @@
 "use client";
-
 import SplitTextImageRow from "@/components/animations/text-image-split";
+import TextSplit from "@/components/animations/text-split";
 import WorksSection from "@/components/works-section";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import {
-  ArrowRightIcon,
   CircleCheckIcon,
   DribbbleIcon,
-  FacebookIcon,
   GithubIcon,
-  InstagramIcon,
   LinkedinIcon,
 } from "lucide-react";
-import Image from "next/image";
 
 import Link from "next/link";
+import { useRef } from "react";
+
+gsap.registerPlugin(useGSAP);
 
 export default function Home() {
+  const reveal1 = useRef(null);
+  const reveal2 = useRef(null);
+  useGSAP(() => {
+    gsap.from(reveal1.current, {
+      opacity: 0,
+      stagger: 0.1,
+      ease: "power2.in",
+      duration: 2,
+    });
+
+    gsap.from(reveal2.current, {
+      opacity: 0,
+      stagger: 0.1,
+      ease: "power2.in",
+      duration: 2,
+    });
+  }, []);
   return (
     <main>
-      <section className="h-screen overflow-hidden">
-        <div className="container mx-auto">
-          <div className="flex flex-col justify-center items-center py-24">
-            <div className="mb-4 flex items-center space-x-2 py-4 px-6 rounded-full pointer-events-none transition-colors duration-100 uppercase text-center outline-1 outline-green-700">
-              <CircleCheckIcon className="h-4 w-4 text-green-700" />
-              <p className="text-zinc-100 text-xs font-medium">
-                Available for Freelance
-              </p>
-            </div>
-            <h1 className="text-zinc-200 text-4xl md:text-9xl font-bold uppercase text-center">
-              Web Developer and Designer
-            </h1>
-            <div className="mt-4 flex items-center space-x-4">
-              <Link
-                className="py-4 px-6 rounded-full text-zinc-950 bg-zinc-100 hover:bg-zinc-700 transition-colors duration-150 text-xs font-medium uppercase"
-                href="/contact"
-              >
-                View Works
-              </Link>
-              <Link
-                className="py-4 px-6 rounded-full text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150s text-xs font-medium uppercase"
-                href="/contact"
-              >
-                Resume
-              </Link>
-            </div>
-            <div className="mt-4 flex items-center space-x-4">
-              <Link
-                className="text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150  rounded-full py-2 px-2"
-                href="/contact"
-              >
-                <FacebookIcon className="h-5 w-5" />
-              </Link>
-              <Link
-                className="text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150 rounded-full py-2 px-2"
-                href="/contact"
-              >
-                <GithubIcon className="h-5 w-5" />
-              </Link>
-              <Link
-                className="text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150 rounded-full py-2 px-2"
-                href="/contact"
-              >
-                <LinkedinIcon className="h-5 w-5" />
-              </Link>
-              <Link
-                className="text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150 rounded-full py-2 px-2"
-                href="/contact"
-              >
-                <DribbbleIcon className="h-5 w-5" />
-              </Link>
-            </div>
-          </div>
+      <section className="min-h-screen flex flex-col justify-center items-center px-4 py-32 md:py-72">
+        <div
+          ref={reveal1}
+          className="mb-4 flex items-center space-x-2 py-2 px-4 rounded-full bg-zinc-900"
+        >
+          <CircleCheckIcon className="h-4 w-4 text-green-700" />
+          <p className="text-zinc-100 text-xs font-medium">
+            Available for Work
+          </p>
         </div>
-      </section>
 
-      <section className="px-4 py-24">
-        <div className="container mx-auto">
-          <div className="flex justify-between space-x-12">
-            <Image
-              src={"/bg.png"}
-              alt="profile"
-              width={1440}
-              height={1280}
-              className="h-[320px] w-[640px]"
-            />
-            <div className="flex flex-col justify-between">
-              <p className="font-medium text-3xl text-zinc-200">
-                I design and build full-stack applications that are scalable,
-                maintainable, and user-friendly—leveraging tools like React,
-                Node.js, TypeScript, and modern APIs to deliver complete digital
-                solutions.
-              </p>
-              <p className="text-2xl text-zinc-200">
-                Focus on growing your business while I ensure your brand stands
-                out in the digital space—delivering a strong online presence
-                that sets you apart from the competition.
-              </p>
+        <TextSplit
+          text1="Creative"
+          text2="Developer"
+          className="text-zinc-200 text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-bold uppercase text-center leading-tight"
+        />
+        <div
+          ref={reveal2}
+          className="flex flex-col items-center justify-center"
+        >
+          <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
+            <Link
+              className="w-full sm:w-auto text-center py-3 px-6 rounded-full text-zinc-950 bg-zinc-100 hover:bg-zinc-700 transition-colors duration-150 text-xs font-medium uppercase"
+              href="/contact"
+            >
+              View Works
+            </Link>
+            <Link
+              className="w-full sm:w-auto text-center py-3 px-6 rounded-full text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150 text-xs font-medium uppercase"
+              href="/contact"
+            >
+              Resume
+            </Link>
+          </div>
 
-              <Link className="flex items-center space-x-2" href="/about">
-                <span className="text-xs font-medium text-zinc-400 uppercase underline">
-                  More About Me
-                </span>
-              </Link>
-            </div>
+          <div className="mt-4 flex items-center space-x-4">
+            <Link
+              className="text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150 rounded-full py-2 px-2"
+              href="https://github.com/somniphy/"
+              target="_blank"
+            >
+              <GithubIcon className="h-5 w-5" />
+            </Link>
+            <Link
+              className="text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150 rounded-full py-2 px-2"
+              href="https://www.linkedin.com/in/chrispenales/"
+              target="_blank"
+            >
+              <LinkedinIcon className="h-5 w-5" />
+            </Link>
+            <Link
+              className="text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150 rounded-full py-2 px-2"
+              href="https://dribbble.com/chan999u/shots"
+              target="_blank"
+            >
+              <DribbbleIcon className="h-5 w-5" />
+            </Link>
           </div>
         </div>
       </section>
@@ -129,6 +119,14 @@ export default function Home() {
       </section>
 
       <WorksSection />
+      <div className="text-center pb-12">
+        <Link
+          href="/works"
+          className="text-zinc-400 text-sm underline uppercase"
+        >
+          More Works
+        </Link>
+      </div>
     </main>
   );
 }
