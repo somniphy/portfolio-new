@@ -1,60 +1,145 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import Navlink from "./navlink";
-import { navigation } from "@/const/navigation";
+import Button from "./button";
+import { MenuIcon, XIcon } from "lucide-react";
+
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
-
 export default function Navbar() {
-  const overlayRef = useRef(null);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLDivElement>(null);
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
-  const openMenu = () => {
-    gsap.to(overlayRef.current, {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      duration: 0.8,
-      ease: "power2.inOut",
-      onStart: () => {
-        setIsMenuOpen(true);
-      },
-    });
-  };
-
-  const closeMenu = () => {
-    gsap.to(overlayRef.current, {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-      duration: 0.8,
-      ease: "power2.inOut",
-      onComplete: () => {
-        setIsMenuOpen(false);
-      },
-    });
-  };
-
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  }, [isOpen]);
+  useGSAP(() => {
+    if (isOpen && closeButtonRef.current) {
+      gsap.fromTo(
+        closeButtonRef.current,
+        { opacity: 0, y: -10, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.3,
+          ease: "power2.out",
+        }
+      );
+    }
+    if (!isOpen && menuButtonRef.current) {
+      gsap.fromTo(
+        menuButtonRef.current,
+        { opacity: 0, y: 10, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.3,
+          ease: "power2.out",
+        }
+      );
+    }
+  }, []);
   return (
-    <header className="fixed top-0 w-full flex z-40">
-      <nav className="flex justify-between items-center container mx-auto">
-        <Link href="/" className="flex justify-center items-center gap-2 mix-blend-difference">
-          <span className="text-sm font-medium text-zinc-100">Christian Penales</span>
-        </Link>
-        <div className="">
-          <div className="flex flex-row gap-4 py-6 w-full text-center">
-            {navigation.map((link) => (
+    <nav className="fixed top-0 w-full max-w-screen z-40 px-4 mix-blend-difference">
+      <div className="container mx-auto ">
+        <div className="flex justify-between items-center py-4 ">
+          <Link href="/" className="text-zinc-200 text-sm font-bold z-[990]">
+            ☼ Christian Penales
+          </Link>
+          <div className="hidden md:flex space-x-4 item-center">
+            <Navlink
+              className="text-zinc-200 text-sm font-medium"
+              title="Index"
+              href="/"
+            />
+            <Navlink
+              className="text-zinc-200 text-sm font-medium"
+              title="About"
+              href="/about"
+            />
+            <Navlink
+              className="text-zinc-200 text-sm font-medium"
+              title="Services"
+              href="/services"
+            />
+            <Navlink
+              className="text-zinc-200 text-sm font-medium"
+              title="Works"
+              href="/works"
+            />
+          </div>
+          <div className="hidden md:flex">
+            <Button className="bg-zinc-700">
               <Navlink
-                key={link.name}
-                href={link.href}
-                title={link.name}
-                onClick={closeMenu}
-                className="font-medium text-sm text-zinc-100"
+                className="text-zinc-200 text-sm font-medium"
+                title="Let's Talk"
+                href="/contact"
               />
-            ))}
+            </Button>
+          </div>
+          <div className="md:hidden flex z-[9999]">
+            <Button onClick={toggleMenu}>
+              {isOpen ? (
+                <div
+                  className="flex space-x-2 items-center "
+                  ref={closeButtonRef}
+                >
+                  <p className="text-sm text-zinc-200 font-medium">Close</p>
+                  <XIcon className="text-zinc-200" />
+                </div>
+              ) : (
+                <div
+                  className="flex space-x-2 items-center"
+                  ref={menuButtonRef}
+                >
+                  <p className="text-sm text-zinc-200 font-medium">Menu</p>
+                  <MenuIcon className="text-zinc-200" />
+                </div>
+              )}
+            </Button>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+      {isOpen && (
+        <div className="px-4 md:hidden fixed inset-0 bg-zinc-900 bg-opacity-90 flex flex-col items-start justify-center space-y-6 z-[99] transition-opacity duration-300">
+          <Link
+            className="text-zinc-200 text-7xl font-medium"
+            href="/"
+            onClick={closeMenu}
+          >
+            Index
+          </Link>
+          <Link
+            className="text-zinc-200 text-7xl font-medium"
+            href="/about"
+            onClick={closeMenu}
+          >
+            About
+          </Link>
+          <Link
+            className="text-zinc-200 text-7xl font-medium"
+            href="/works"
+            onClick={closeMenu}
+          >
+            Works
+          </Link>
+          <Link
+            className="text-zinc-200 text-7xl font-medium"
+            href="/contact"
+            onClick={closeMenu}
+          >
+            Let's Talk
+          </Link>
+        </div>
+      )}
+    </nav>
   );
 }

@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
-import Navbar from "@/components/navbar";
 import SmoothScroll from "@/components/smooth-scroll";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 // import IntroLoader from "@/components/intro-loader";
 
 const inter = Inter_Tight({
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} antialiased min-h-screen w-screen overflow-x-hidden font-inter bg-zinc-950`}
+        className={`${inter.variable} antialiased min-h-screen overflow-x-hidden font-inter bg-zinc-900`}
       >
         <ThemeProvider
           attribute="class"
@@ -35,10 +36,10 @@ export default function RootLayout({
         >
           {/* <IntroLoader /> */}
           <SmoothScroll>
-            <Navbar />
-
+           <Navbar />
             {children}
           </SmoothScroll>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

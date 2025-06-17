@@ -1,39 +1,38 @@
-import { TextEncrypted } from "./text-encrypted";
-import Navlink from "./navlink";
-import TextStagger from "./text-stagger";
-import Skills from "./skills";
 import Image from "next/image";
+import TextStagger from "./animations/text-stagger";
 
 export default function AboutSection() {
   return (
-    <div className="container mx-auto relative flex justify-center w-screen min-h-screen overflow-x-hidden">
-      <div className="w-full flex flex-col justify-center">
-        <TextEncrypted
-          text="About Me"
-          className="text-6xl md:text-7xl lg:text-8xl font-medium text-zinc-200"
-        />
-        <div className="flex justify-between items-center">
-          <TextStagger className="text-2xl text-zinc-200 font-medium md:mt-8  w-[80%]">
-            A Web Developer and UI/UX Designer with a knack for creating
-            intuitive, user-centered digital experiences. With a strong
-            foundation in both design and development, I bridge the gap between
-            aesthetics and functionality.
-          </TextStagger>
-          <Image src="/logo.svg" alt="logo" width={480} height={480} />
-        </div>
+    <section className="py-24">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-8">
+          {/* Text Section */}
+          <div className="flex-1 flex flex-col gap-6">
+            <h1 className="text-6xl md:text-8xl uppercase font-medium text-zinc-200">
+              About Me
+            </h1>
+          <TextStagger className="text-xl font-light md:text-3xl text-zinc-200">
+              Hi, I'm Christian Jay, a passionate and detail-oriented Freelance
+              Web Developer and Web Designer with 3 years of experience crafting
+              visually stunning, user-friendly, and responsive web applications.
+              I specialize in turning creative ideas into seamless digital
+              experiences by leveraging effective technologies and best
+              practices in web development.
+            </TextStagger>
+          </div>
 
-        {/* Link to More About Me */}
-        <div className="">
-          <Navlink
-            href="/about"
-            title="More About me"
-            className="mt-4 font-medium text-sm text-zinc-900 bg-zinc-200 py-3 px-6"
-          />
-        </div>
-        <div className="mt-6">
-          <Skills />
+          {/* Image Section */}
+          <div className="flex-1 relative aspect-square max-w-lg w-full">
+            <Image
+              src="/image-5.jpg"
+              alt="profile-pic"
+              fill
+              className="object-cover rounded-xl"
+              priority
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

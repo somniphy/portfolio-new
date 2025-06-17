@@ -1,27 +1,52 @@
-import { socials } from "@/const/socials";
-import Navlink from "@/components/navlink";
-import Link from "next/link";
 export default function Footer() {
   return (
-    <footer>
-      <div className="absolute bottom-[3%] left-[50%] translate-x-[-50%] w-[89%] max-w-[1440px] mx-auto mix-blend-exclusion z-[999]">
-        <div className="flex justify-between items-center w-full ">
-          <div className="inline-flex gap-4">
-            {socials.map((social) => (
-              <Navlink
-                key={social.name}
-                href={social.href}
-                title={social.name}
-                className="uppercase text-sm"
-              />
-            ))}
-          </div>
-          <Link
-            href={"mailto:penalescjay@gmail.com"}
-            className="text-white text-sm uppercase"
+    <footer className="w-full px-4 border-t border-zinc-800 py-24">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+        {/* Logo or Name */}
+        <div className="text-zinc-200 text-4xl font-medium">
+          Christian Penales &copy; 2025
+        </div>
+
+        {/* Navigation Links */}
+        <div className="flex flex-col items-start gap-4 text-zinc-400 text-sm">
+          <a href="/" className="hover:text-zinc-200 transition">
+            Index
+          </a>
+          <a href="/about" className="hover:text-zinc-200 transition">
+            About
+          </a>
+          <a href="/services" className="hover:text-zinc-200 transition">
+            Services
+          </a>
+          <a href="/works" className="hover:text-zinc-200 transition">
+            Works
+          </a>
+        </div>
+        {/* Navigation Links */}
+        <div className="flex flex-col items-start gap-4 text-zinc-400 text-sm">
+          <a href="/" className="hover:text-zinc-200 transition">
+            LinkedIn
+          </a>
+          <a href="/about" className="hover:text-zinc-200 transition">
+            Dribbble
+          </a>
+          <a href="/works" className="hover:text-zinc-200 transition">
+            GitHub
+          </a>
+          <a href="/works" className="hover:text-zinc-200 transition">
+            OnlineJobs
+          </a>
+        </div>
+
+        {/* Socials or Email */}
+        <div className="text-zinc-400 text-sm">
+          <p>Let's connect:</p>
+          <a
+            href="mailto:hello@christudio.dev"
+            className="hover:text-zinc-200 transition"
           >
             penalescjay@gmail.com
-          </Link>
+          </a>
         </div>
       </div>
     </footer>

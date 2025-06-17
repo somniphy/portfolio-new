@@ -3,4 +3,5 @@ export const socials = [
   { name: "Linkedin", href: "https://www.linkedin.com/in/chrispenales/" },
   { name: "Dribbble", href: "https://dribbble.com/chan999u" },
   { name: "Github", href: "https://github.com/somniphy" },
+  { name: "OnlineJobs", href: "https://github.com/somniphy" },
 ];
