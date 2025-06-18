@@ -1,14 +1,12 @@
 "use client";
 import SplitTextImageRow from "@/components/animations/text-image-split";
 import TextSplit from "@/components/animations/text-split";
+import Socials from "@/components/socials";
 import WorksSection from "@/components/works-section";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import {
   CircleCheckIcon,
-  DribbbleIcon,
-  GithubIcon,
-  LinkedinIcon,
 } from "lucide-react";
 
 import Link from "next/link";
@@ -39,7 +37,7 @@ export default function Home() {
       <section className="min-h-screen flex flex-col justify-center items-center px-4 py-32 md:py-72">
         <div
           ref={reveal1}
-          className="mb-4 flex items-center space-x-2 py-2 px-4 rounded-full bg-zinc-900"
+          className="mb-4 flex items-center space-x-2 py-2 px-4 rounded-full bg-zinc-900 border-2 border-green-700"
         >
           <CircleCheckIcon className="h-4 w-4 text-green-700" />
           <p className="text-zinc-100 text-xs font-medium">
@@ -59,40 +57,20 @@ export default function Home() {
           <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
             <Link
               className="w-full sm:w-auto text-center py-3 px-6 rounded-full text-zinc-950 bg-zinc-100 hover:bg-zinc-700 transition-colors duration-150 text-xs font-medium uppercase"
-              href="/contact"
+              href="/works"
             >
               View Works
             </Link>
-            <Link
+            {/* <Link
               className="w-full sm:w-auto text-center py-3 px-6 rounded-full text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150 text-xs font-medium uppercase"
               href="/contact"
             >
               Resume
-            </Link>
+            </Link> */}
           </div>
 
-          <div className="mt-4 flex items-center space-x-4">
-            <Link
-              className="text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150 rounded-full py-2 px-2"
-              href="https://github.com/somniphy/"
-              target="_blank"
-            >
-              <GithubIcon className="h-5 w-5" />
-            </Link>
-            <Link
-              className="text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150 rounded-full py-2 px-2"
-              href="https://www.linkedin.com/in/chrispenales/"
-              target="_blank"
-            >
-              <LinkedinIcon className="h-5 w-5" />
-            </Link>
-            <Link
-              className="text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150 rounded-full py-2 px-2"
-              href="https://dribbble.com/chan999u/shots"
-              target="_blank"
-            >
-              <DribbbleIcon className="h-5 w-5" />
-            </Link>
+          <div className="mt-4">
+            <Socials />
           </div>
         </div>
       </section>
@@ -106,26 +84,19 @@ export default function Home() {
             imageSrc="/sailfasthome.png"
           />
           <SplitTextImageRow
+            leftText="INTERACTIVE"
+            rightText="EXPERIENCES"
+            imageSrc="/architecture.png"
+          />
+          <SplitTextImageRow
             leftText="UI/UX"
             rightText="DESIGN"
             imageSrc="/gloomyeffectshero.png"
           />
-          <SplitTextImageRow
-            leftText="BRANDING"
-            rightText="DESIGN"
-            imageSrc="/bg.png"
-          />
         </div>
       </section>
-
-      <WorksSection />
-      <div className="text-center pb-12">
-        <Link
-          href="/works"
-          className="text-zinc-400 text-sm underline uppercase"
-        >
-          More Works
-        </Link>
+      <div className="flex flex-col space-y-4">
+        <WorksSection />
       </div>
     </main>
   );

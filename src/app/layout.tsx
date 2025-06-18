@@ -3,8 +3,7 @@ import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/smooth-scroll";
 import Navbar from "@/components/navbar";
-
-// import IntroLoader from "@/components/intro-loader";
+import Footer from "@/components/footer";
 
 const inter = Inter_Tight({
   variable: "--font-figtree",
@@ -27,10 +26,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased min-h-screen overflow-x-hidden font-inter bg-zinc-900`}
       >
-        {/* <IntroLoader /> */}
         <SmoothScroll>
           <Navbar />
           {children}
+          <Footer />
         </SmoothScroll>
       </body>
     </html>

@@ -87,12 +87,12 @@ export default function Navbar() {
                   className="flex space-x-2 items-center "
                   ref={closeButtonRef}
                 >
-                  <p className="text-sm text-zinc-200 font-medium">Close</p>
+                  <p className="text-sm text-zinc-200 font-medium ">Close</p>
                   <XIcon className="text-zinc-200" />
                 </div>
               ) : (
                 <div
-                  className="flex space-x-2 items-center"
+                  className="flex space-x-2 items-center hover:bg-zinc-400"
                   ref={menuButtonRef}
                 >
                   <p className="text-sm text-zinc-200 font-medium">Menu</p>

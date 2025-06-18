@@ -1,4 +1,6 @@
-// pages/contact.tsx
+
+import Socials from "@/components/socials";
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -13,52 +15,27 @@ export default function Contact() {
           collaborations.
         </p>
       </section>
-
-      <form className="mt-16 w-full max-w-3xl space-y-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div className="flex flex-col">
-            <label htmlFor="name" className="mb-2 text-sm font-medium">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              className="px-4 py-3 bg-zinc-800 rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-600"
-              required
-            />
-          </div>
-          <div className="flex flex-col">
-            <label htmlFor="email" className="mb-2 text-sm font-medium">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="px-4 py-3 bg-zinc-800 rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-600"
-              required
-            />
+      <section className="py-24 max-w-3xl w-full space-y-6">
+        <div className="flex flex-col space-y-2">
+          <h2 className="text-4xl font-bold uppercase tracking-tight">
+            Send an email to
+          </h2>
+          <Link
+            href="mailto:penalescjay@gmail.com"
+            className="text-lg text-zinc-400"
+          >
+            penalescjay@gmail.com
+          </Link>
+        </div>
+        <div className="flex flex-col space-y-2">
+          <h2 className="text-4xl font-bold uppercase tracking-tight">
+            or reach me using my socials
+          </h2>
+          <div className="mt-4">
+            <Socials />
           </div>
         </div>
-
-        <div className="flex flex-col">
-          <label htmlFor="message" className="mb-2 text-sm font-medium">
-            Message
-          </label>
-          <textarea
-            id="message"
-            rows={5}
-            className="px-4 py-3 bg-zinc-800 rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-600"
-            required
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          className="px-8 py-3 bg-zinc-200 text-zinc-900 font-semibold rounded-md hover:bg-white transition"
-        >
-          Send Message
-        </button>
-      </form>
+      </section>
     </main>
   );
 }

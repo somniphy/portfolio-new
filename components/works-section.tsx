@@ -48,9 +48,7 @@ export default function WorksSection() {
   return (
     <section ref={containerRef} className="relative px-4 py-24">
       <div className="container mx-auto">
-        <p className="text-sm text-zinc-400 uppercase mb-4 font-medium text-center">
-          Works
-        </p>
+      
 
         <ul className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
           {works.map((work, i) => (
