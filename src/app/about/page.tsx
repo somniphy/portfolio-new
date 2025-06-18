@@ -19,11 +19,11 @@ export default function About() {
             className="aspect-video object-cover"
           />
           <p className="text-zinc-200 text-4xl font-semibold">
-            Hi, I&apos;m Christian — a Creative Developer from the Philippines.
+            Hi, I&apos;m Christian 
           </p>
           <div className="max-w-7xl">
-            <TextStagger className="text-lg text-zinc-400 text-justify">
-              A passionate and detail-oriented Freelance Web Developer and Web
+            <TextStagger className="text-xl md:text-4xl text-zinc-400 text-justify">
+              A passionate and detail-oriented Freelance Web Developer and UI/UX
               Designer with 3 years of experience crafting visually stunning,
               user-friendly, and responsive web applications. I specialize in
               turning creative ideas into seamless digital experiences by
@@ -42,9 +42,9 @@ export default function About() {
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           {/* Section 1 */}
-          <div className="flex flex-col space-y-4">
-            <h2 className="text-zinc-200 text-3xl md:text-4xl font-medium">
-              Front-end Development & Design Integration
+          <div className="flex flex-col space-y-4 ">
+            <h2 className="text-zinc-200 text-xl md:text-2xl font-medium">
+              Web Development & Design Integration
             </h2>
             <ul className="space-y-2 text-lg text-zinc-400">
               <li>Custom website development (React, Vue, Next, Laravel)</li>
@@ -57,7 +57,7 @@ export default function About() {
 
           {/* Section 2 */}
           <div className="flex flex-col space-y-4">
-            <h2 className="text-zinc-200 text-3xl md:text-4xl font-medium">
+            <h2 className="text-zinc-200 text-xl md:text-2xl font-medium">
               Interaction & Animation
             </h2>
             <ul className="space-y-2 text-lg text-zinc-400">
@@ -69,7 +69,7 @@ export default function About() {
 
           {/* Section 3 */}
           <div className="flex flex-col space-y-4 md:col-span-2">
-            <h2 className="text-zinc-200 text-3xl md:text-4xl font-medium">
+            <h2 className="text-zinc-200 text-xl md:text-2xl font-medium">
               Others
             </h2>
             <ul className="space-y-2 text-lg text-zinc-400">
@@ -83,11 +83,11 @@ export default function About() {
       </section>
       <section className="max-w-7xl mx-auto flex flex-col space-y-12 py-24 px-4">
         <div className="text-center">
-          <p className="text-sm font-medium uppercase text-zinc-200">
+          <p className="text-sm font-medium uppercase text-zinc-400">
             Experience
           </p>
         </div>
-        <div className="flex flex-col space-y-16">
+        <div className="flex flex-col space-y-16 ">
           <div className="flex justify-between items-start">
             <div className="flex-1">
               <h3 className="text-zinc-200 text-xl md:text-2xl font-medium">
