@@ -16,7 +16,7 @@ const works = [
   { title: "GloomyEffects", image: "/gloomyeffectshero.png" },
   { title: "Sailfast", image: "/sailfasthome.png" },
   { title: "SonnyLi Urban Photography", image: "/architecture.png" },
-  { title: "Lookbook Summer", image: "/bg.png" },
+  { title: "Fleur", image: "/fleur.png" },
 ];
 
 export default function WorksSection() {
