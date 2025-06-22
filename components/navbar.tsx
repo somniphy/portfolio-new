@@ -51,7 +51,7 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full max-w-screen z-40 px-4">
       <div className="container mx-auto ">
         <div className="flex justify-between items-center py-4 ">
-          <Link href="/" className="text-zinc-200 text-sm font-bold z-[990]">
+          <Link href="/" className="text-zinc-200 text-sm font-bold uppercase z-[990]">
             Christian Penales
           </Link>
           <div className="hidden md:flex space-x-4 item-center">

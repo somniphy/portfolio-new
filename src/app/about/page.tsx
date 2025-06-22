@@ -7,7 +7,7 @@ export default function About() {
       <section className="min-h-screen flex flex-col justify-center items-center px-4 space-y-16 pt-32">
         <TextSplit
           text1="About"
-          text2="Me"
+          text2=""
           className="text-zinc-200 text-4xl md:text-6xl font-bold uppercase text-center leading-tight"
         />
         <div className="flex flex-col items-center justify-center space-y-12 mx-auto container">
@@ -19,7 +19,7 @@ export default function About() {
             className="aspect-video object-cover"
           />
           <p className="text-zinc-200 text-4xl font-semibold">
-            Hi, I&apos;m Christian 
+            Hi, I&apos;m Christian
           </p>
           <div className="max-w-7xl">
             <TextStagger className="text-xl md:text-4xl text-zinc-400 text-justify">
@@ -41,7 +41,6 @@ export default function About() {
         </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          {/* Section 1 */}
           <div className="flex flex-col space-y-4 ">
             <h2 className="text-zinc-200 text-xl md:text-2xl font-medium">
               Web Development & Design Integration
@@ -50,12 +49,11 @@ export default function About() {
               <li>Custom website development (React, Vue, Next, Laravel)</li>
               <li>Design-to-code conversions (Figma to responsive code)</li>
               <li>Pixel-perfect UI with animations & interactions</li>
-              <li>Headless CMS integration (Sanity, Contentful, etc.)</li>
-              <li>Creative e-commerce (Shopify, Headless commerce)</li>
+              <li>Headless CMS integration (Sanity)</li>
+              <li>Creative e-commerce (Shopify, WordPress)</li>
             </ul>
           </div>
 
-          {/* Section 2 */}
           <div className="flex flex-col space-y-4">
             <h2 className="text-zinc-200 text-xl md:text-2xl font-medium">
               Interaction & Animation
@@ -67,7 +65,6 @@ export default function About() {
             </ul>
           </div>
 
-          {/* Section 3 */}
           <div className="flex flex-col space-y-4 md:col-span-2">
             <h2 className="text-zinc-200 text-xl md:text-2xl font-medium">
               Others
@@ -146,6 +143,8 @@ export default function About() {
                   Developed and maintained responsive websites using HTML, CSS,
                   JavaScript, and React
                 </li>
+                <li>Developed
+                   custom websites using WordPress and PHP</li>
                 <li>
                   Translated Figma designs into interactive, pixel-perfect UI
                   components
@@ -157,6 +156,41 @@ export default function About() {
                 <li>Optimized web pages for speed, SEO, and accessibility</li>
                 <li>Integrated REST APIs</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="max-w-7xl mx-auto flex flex-col space-y-12 py-24 px-4">
+        <div className="text-center">
+          <p className="text-sm font-medium uppercase text-zinc-400">
+            Education
+          </p>
+        </div>
+        <div className="flex flex-col space-y-16 ">
+          <div className="flex justify-between items-start">
+            <div className="flex-1">
+              <h3 className="text-zinc-200 text-xl md:text-2xl font-medium">
+                MSU-IIT 2024
+              </h3>
+            </div>
+            <div className="flex-2 flex flex-col space-y-4">
+              <h3 className="text-zinc-200 text-xl md:text-2xl font-medium">
+                Bachelor of Science in Information Technology
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col space-y-16 ">
+          <div className="flex justify-between items-start">
+            <div className="flex-1">
+              <h3 className="text-zinc-200 text-xl md:text-2xl font-medium">
+                Iligan Computer Institute 2019
+              </h3>
+            </div>
+            <div className="flex-2 flex flex-col space-y-4">
+              <h3 className="text-zinc-200 text-xl md:text-2xl font-medium">
+                ICT
+              </h3>
             </div>
           </div>
         </div>

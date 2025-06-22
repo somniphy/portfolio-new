@@ -40,8 +40,8 @@ export default function TextStagger({ children, className }: TextStaggerProps) {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 80%",
-        end: "bottom 20%",
+        start: "top 50%",
+        end: "bottom 50%",
         toggleActions: "play none none reverse",
         scrub: true,
       },

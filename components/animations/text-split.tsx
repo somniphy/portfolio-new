@@ -38,8 +38,7 @@ export default function TextSplit({ text1, text2, className }: TextSplitProps) {
     });
   }, []);
   return (
-    <div ref={containerRef} className="flex space-x-4">
-      {/* div tag with custom class */}
+    <div ref={containerRef} className="flex flex-col">
       <p ref={header1Ref} className={className}>
         {text1}
       </p>

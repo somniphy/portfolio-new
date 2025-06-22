@@ -5,9 +5,7 @@ import Socials from "@/components/socials";
 import WorksSection from "@/components/works-section";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import {
-  CircleCheckIcon,
-} from "lucide-react";
+import { CircleCheckIcon } from "lucide-react";
 
 import Link from "next/link";
 import { useRef } from "react";
@@ -33,8 +31,8 @@ export default function Home() {
     });
   }, []);
   return (
-    <main>
-      <section className="min-h-screen flex flex-col justify-center items-center px-4 py-32 md:py-72">
+    <main className="flex flex-col space-y-32">
+      <section className="min-h-screen flex flex-col justify-center items-center px-4 py-32">
         <div
           ref={reveal1}
           className="mb-4 flex items-center space-x-2 py-2 px-4 rounded-full bg-zinc-900 border-2 border-green-700"
@@ -46,9 +44,14 @@ export default function Home() {
         </div>
 
         <TextSplit
-          text1="Creative"
-          text2="Developer"
+          text1="Christian Penales"
+          text2=""
           className="text-zinc-200 text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-bold uppercase text-center leading-tight"
+        />
+        <TextSplit
+          text1="Web Developer"
+          text2=""
+          className="text-zinc-400 text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold uppercase text-center leading-tight"
         />
         <div
           ref={reveal2}
@@ -61,12 +64,6 @@ export default function Home() {
             >
               View Works
             </Link>
-            {/* <Link
-              className="w-full sm:w-auto text-center py-3 px-6 rounded-full text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150 text-xs font-medium uppercase"
-              href="/contact"
-            >
-              Resume
-            </Link> */}
           </div>
 
           <div className="mt-4">
@@ -95,9 +92,11 @@ export default function Home() {
           />
         </div>
       </section>
-      <div className="flex flex-col space-y-4">
+
+      <section className="flex flex-col items-center justify-center px-4 py-24">
+        <p className="text-sm font-medium uppercase text-zinc-400">Works</p>
         <WorksSection />
-      </div>
+      </section>
     </main>
   );
 }
