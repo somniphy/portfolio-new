@@ -22,12 +22,11 @@ export default async function WorkPage({ params }: WorkPageProps) {
 
   return (
     <main className="container mx-auto">
-      <section className="min-h-screen pt-32 pb-16 space-y-12">
-        <div className="space-y-2">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white uppercase">
+      <section className="min-h-screen pt-32 pb-16 space-y-12 px-2">
+        <div className="px-2">
+          <h1 className="text-[10vh] md:text-[15.5vh] lg:text-[25.5vh] font-bold tracking-tight leading-20 text-white uppercase">
             {work.title}
           </h1>
-          <p className="text-zinc-400">{work.type}</p>
         </div>
 
         <div className="w-full mx-auto overflow-hidden rounded-2xl shadow-lg border border-zinc-800">

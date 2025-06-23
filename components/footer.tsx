@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="w-full px-4 border-t border-zinc-800 py-24">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
-        <div className="text-zinc-200 text-2xl font-medium uppercase leading-tight">
+        <div className="text-zinc-200 text-2xl font-bold uppercase leading-tight">
           Christian Penales &copy; 2025
         </div>
 
