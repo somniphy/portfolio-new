@@ -13,5 +13,5 @@ export default function LocalTime() {
     return () => clearInterval(interval);
   }, []);
 
-  return <p className="text-zinc-400 text-sm">{time} (Manila)</p>;
+  return <p className="text-zinc-800 text-sm">{time} (Manila)</p>;
 }

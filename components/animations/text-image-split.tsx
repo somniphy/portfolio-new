@@ -59,7 +59,7 @@ export default function SplitTextImageRow({
   return (
     <div
       ref={containerRef}
-      className="flex items-center justify-center text-zinc-200 font-bold text-3xl sm:text-4xl md:text-6xl lg:text-8xl "
+      className="flex items-center justify-center text-zinc-900 font-bold text-3xl sm:text-4xl md:text-6xl lg:text-8xl "
     >
       <div ref={leftRef}>{leftText}</div>
 

@@ -1,8 +1,4 @@
-import {
-  DribbbleIcon,
-  GithubIcon,
-  LinkedinIcon,
-} from "lucide-react";
+import { DribbbleIcon, GithubIcon, LinkedinIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Socials() {
@@ -12,6 +8,7 @@ export default function Socials() {
         className="text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150 rounded-full py-2 px-2"
         href="https://github.com/somniphy/"
         target="_blank"
+        aria-label="github"
       >
         <GithubIcon className="h-5 w-5" />
       </Link>
@@ -19,6 +16,7 @@ export default function Socials() {
         className="text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150 rounded-full py-2 px-2"
         href="https://www.linkedin.com/in/chrispenales/"
         target="_blank"
+        aria-label="linkedin"
       >
         <LinkedinIcon className="h-5 w-5" />
       </Link>
@@ -26,6 +24,7 @@ export default function Socials() {
         className="text-zinc-200 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-150 rounded-full py-2 px-2"
         href="https://dribbble.com/chan999u/shots"
         target="_blank"
+        aria-label="dribbble"
       >
         <DribbbleIcon className="h-5 w-5" />
       </Link>

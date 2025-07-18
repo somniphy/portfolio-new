@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} antialiased min-h-screen overflow-x-hidden font-inter bg-zinc-900`}
+        className={`${inter.variable} antialiased min-h-screen overflow-x-hidden font-inter bg-[length:128px_128px] bg-[linear-gradient(to_right,lightgray_1px,transparent_1px),linear-gradient(to_bottom,lightgray_1px,transparent_1px)]`}
       >
         <SmoothScroll>
           <Navbar />
