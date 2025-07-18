@@ -78,17 +78,17 @@ export default function Home() {
           <SplitTextImageRow
             leftText="WEBSITE"
             rightText="DEVELOPMENT"
-            imageSrc="/sailfasthome.png"
+            imageSrc="/NomiaHero.png"
           />
           <SplitTextImageRow
             leftText="INTERACTIVE"
             rightText="EXPERIENCES"
-            imageSrc="/architecture.png"
+            imageSrc="/GloomyeffectsHero.png"
           />
           <SplitTextImageRow
             leftText="UI/UX"
             rightText="DESIGN"
-            imageSrc="/gloomyeffectshero.png"
+            imageSrc="/ZyptoHero.png"
           />
         </div>
       </section>
