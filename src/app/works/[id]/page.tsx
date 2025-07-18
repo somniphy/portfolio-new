@@ -190,11 +190,11 @@ export default async function WorkPage({ params }: WorkPageProps) {
             </div>
 
             {/* Navigation to Other Projects */}
-            <div className="border-t border-zinc-800 pt-12">
-              <h3 className="text-2xl font-bold mb-8 text-white">
+            <div className="">
+              <h3 className="text-2xl font-bold mb-8 text-zinc-900">
                 Other Projects
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
                 {works
                   .filter((w) => w.id !== work.id)
                   .slice(0, 3)

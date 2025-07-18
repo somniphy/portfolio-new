@@ -78,28 +78,28 @@ export default function Home() {
           <SplitTextImageRow
             leftText="WEBSITE"
             rightText="DEVELOPMENT"
-            imageSrc="/NomiaHero.png"
+            imageSrc="/nomia/NomiaHero.png"
           />
           <SplitTextImageRow
             leftText="INTERACTIVE"
             rightText="EXPERIENCES"
-            imageSrc="/GloomyeffectsHero.png"
+            imageSrc="/gloomyeffects/GloomyeffectsHero.png"
           />
           <SplitTextImageRow
             leftText="UI/UX"
             rightText="DESIGN"
-            imageSrc="/ZyptoHero.png"
+            imageSrc="/zypto/ZyptoHero.png"
           />
         </div>
       </section>
 
-      <section className="flex flex-col px-4 py-24">
+      <section className="flex flex-col px-4 py-24 bg-gray-50">
         <WorksSection />
          {/* View All Link */}
         <div className="mt-12 lg:mt-16 text-center">
           <Link
             href="/works"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-zinc-900 text-white rounded-full hover:bg-zinc-800 transition-colors duration-200 font-medium"
+            className="inline-flex items-center gap-2 px-6 py-3  text-white rounded-full hover:bg-zinc-800 transition-colors duration-200 font-medium"
           >
             View All Projects
             <ArrowUpRight className="w-4 h-4" />
